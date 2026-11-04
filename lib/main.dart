@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'home.dart';
 import 'chpizza.dart';
 import 'facebook.dart';
 import 'twitter.dart';
 import 'vpizza.dart';
 import 'fries.dart';
-
+import 'contact.dart';
 
 void main() {
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   @override
