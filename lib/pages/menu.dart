@@ -103,7 +103,7 @@ class Menu extends StatelessWidget {
               height: 100,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) =>
-              const Icon(Icons.local_pizza, size: 100, color: Colors.white),
+                  const Icon(Icons.local_pizza, size: 100, color: Colors.white),
             ),
             const SizedBox(width: 20),
             Expanded(

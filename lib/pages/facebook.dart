@@ -23,7 +23,7 @@ class WebViewExample extends StatefulWidget {
 
   @override
   State<WebViewExample> createState() => _WebViewExampleState();
-// Create the state for this widget
+  // Create the state for this widget
 }
 
 // State class for WebViewExample
@@ -38,13 +38,13 @@ class _WebViewExampleState extends State<WebViewExample> {
     // Initialize the WebViewController
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    // Enable JavaScript for web pages (default is disabled)
+      // Enable JavaScript for web pages (default is disabled)
       ..loadRequest(Uri.parse('https://web.facebook.com/?_rdc=1&_rdr#'));
     // Load the URL inside the WebView
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       //Scaffold provides basic UI layout: AppBar, Body
       appBar: AppBar(
