@@ -9,16 +9,16 @@ const Color kCrust = Color(0xFFFFF4E6); // warm background
 const Color kCharcoal = Color(0xFF2B2118); // text
 const Color kBasil = Color(0xFF2E7D32); // success / whatsapp
 
-class ContactPage extends StatefulWidget {
-  const ContactPage({super.key});
+class Contact extends StatefulWidget {
+  const Contact({super.key});
 
   static const String routeName = '/contact';
 
   @override
-  State<ContactPage> createState() => _ContactPageState();
+  State<Contact> createState() => _ContactState();
 }
 
-class _ContactPageState extends State<ContactPage> {
+class _ContactState extends State<Contact> {
   final _formKey = GlobalKey<FormState>();
   final _nameCtrl = TextEditingController();
   final _emailCtrl = TextEditingController();
@@ -330,13 +330,13 @@ class _ContactPageState extends State<ContactPage> {
                             onPressed: _sending ? null : _sendMessage,
                             icon: _sending
                                 ? const SizedBox(
-                                    height: 18,
-                                    width: 18,
-                                    child: CircularProgressIndicator(
-                                      strokeWidth: 2,
-                                      color: Colors.white,
-                                    ),
-                                  )
+                              height: 18,
+                              width: 18,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: Colors.white,
+                              ),
+                            )
                                 : const Icon(Icons.send),
                             label: Text(
                               _sending ? 'Sending...' : 'Send Message',
