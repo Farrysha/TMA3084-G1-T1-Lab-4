@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
-import 'chpizza.dart';
-import 'facebook.dart';
-import 'twitter.dart';
-import 'vpizza.dart';
-import 'fries.dart';
-
+import 'pages/about.dart';
+import 'pages/contact.dart';
+import 'pages/facebook.dart';
+import 'pages/home.dart';
+import 'pages/menu.dart';
+import 'pages/twitter.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      title: 'WOW Pizza',
+      initialRoute: '/',
       routes: {
-        '0': (context) => Vpizza(),
-        '1': (context) => Chpizza(),
-        '2': (context) => Fries(),
-        '3': (context) => Twitter(),
-        '4': (context) => Facebook(),
+        '/': (context) => const Home(),
+        '/menu': (context) => const Menu(),
+        '/about': (context) => const About(),
+        '/contact': (context) => Contact(),
+        '/facebook': (context) => Facebook(),
+        '/twitter': (context) => Twitter(),
       },
     );
   }
