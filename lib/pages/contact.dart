@@ -330,13 +330,13 @@ class _ContactState extends State<Contact> {
                             onPressed: _sending ? null : _sendMessage,
                             icon: _sending
                                 ? const SizedBox(
-                              height: 18,
-                              width: 18,
-                              child: CircularProgressIndicator(
-                                strokeWidth: 2,
-                                color: Colors.white,
-                              ),
-                            )
+                                    height: 18,
+                                    width: 18,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: Colors.white,
+                                    ),
+                                  )
                                 : const Icon(Icons.send),
                             label: Text(
                               _sending ? 'Sending...' : 'Send Message',
