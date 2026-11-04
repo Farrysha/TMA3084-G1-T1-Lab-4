@@ -4,30 +4,16 @@ import 'package:flutter/material.dart';
 // Import WebView package to display web pages inside the app
 import 'package:webview_flutter/webview_flutter.dart';
 
-// Root widget of the application
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// Change class name to 'Facebook' to match what main.dart expects
+class Facebook extends StatefulWidget {
+  const Facebook({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: WebViewExample(),
-    );
-  }
+  State<Facebook> createState() => _FacebookState();
 }
 
-// Stateful widget to display WebView
-class WebViewExample extends StatefulWidget {
-  const WebViewExample({super.key}); // Constructor
-
-  @override
-  State<WebViewExample> createState() => _WebViewExampleState();
-// Create the state for this widget
-}
-
-// State class for WebViewExample
-class _WebViewExampleState extends State<WebViewExample> {
+// State class for Facebook page
+class _FacebookState extends State<Facebook> {
   // WebViewController to control the WebView (load pages, execute JS, etc.)
   late final WebViewController controller;
 
@@ -44,9 +30,9 @@ class _WebViewExampleState extends State<WebViewExample> {
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      //Scaffold provides basic UI layout: AppBar, Body
+      // Scaffold provides basic UI layout: AppBar, Body
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
         automaticallyImplyLeading: false,
@@ -62,7 +48,6 @@ class _WebViewExampleState extends State<WebViewExample> {
       ),
       body: WebViewWidget(controller: controller),
       // Display the WebView with the controller
-      // This shows the website inside the Flutter app
     );
   }
 }
