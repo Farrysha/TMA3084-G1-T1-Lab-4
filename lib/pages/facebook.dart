@@ -24,7 +24,7 @@ class _FacebookState extends State<Facebook> {
     // Initialize the WebViewController
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    // Enable JavaScript for web pages (default is disabled)
+      // Enable JavaScript for web pages (default is disabled)
       ..loadRequest(Uri.parse('https://web.facebook.com/?_rdc=1&_rdr#'));
     // Load the URL inside the WebView
   }
