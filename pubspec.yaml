@@ -25,6 +25,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/images/
     - assets/peperoni.jpg
     - assets/hawaiian.jpg
     - assets/margherita.jpg
