@@ -256,7 +256,10 @@ class ContactPage extends StatelessWidget {
                     style: TextButton.styleFrom(foregroundColor: kCharcoal),
                     // ---- back to pages/home.dart, clearing the stack ----
                     onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                        context, '/', (route) => false),
+                      context,
+                      '/',
+                      (route) => false,
+                    ),
                     icon: const Icon(Icons.home),
                     label: const Text('Back to Home'),
                   ),
@@ -355,9 +358,10 @@ class _PulsingLogoState extends State<_PulsingLogo>
   @override
   Widget build(BuildContext context) {
     return ScaleTransition(
-      scale: Tween<double>(begin: 0.92, end: 1.08).animate(
-        CurvedAnimation(parent: _c, curve: Curves.easeInOut),
-      ),
+      scale: Tween<double>(
+        begin: 0.92,
+        end: 1.08,
+      ).animate(CurvedAnimation(parent: _c, curve: Curves.easeInOut)),
       child: Container(
         height: 52,
         width: 52,
@@ -430,8 +434,11 @@ class _InfoCard extends StatelessWidget {
           image,
           width: 30,
           height: 30,
-          errorBuilder: (c, e, s) => const Icon(Icons.image_not_supported,
-              color: Colors.red, size: 30),
+          errorBuilder: (c, e, s) => const Icon(
+            Icons.image_not_supported,
+            color: Colors.red,
+            size: 30,
+          ),
         ),
         title: Text(
           title,
@@ -478,7 +485,7 @@ class _SocialButton extends StatelessWidget {
             image,
             fit: BoxFit.contain,
             errorBuilder: (c, e, s) =>
-            const Icon(Icons.broken_image, color: Colors.red, size: 20),
+                const Icon(Icons.broken_image, color: Colors.red, size: 20),
           ),
         ),
       ),
